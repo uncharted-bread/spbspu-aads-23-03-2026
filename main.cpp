@@ -15,6 +15,7 @@ int main()
     testDefaultVector
   };
   size_t testCount = sizeof(tests) / sizeof(test_t);
+  std::cout << std::boolalpha;
   for (size_t i = 0; i < testCount; ++i)
   {
     std::cout << tests[i]() << ": " << i << "\n";
