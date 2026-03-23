@@ -1,2 +1,3 @@
-vector-tests: main.cpp
-	g++ -o vector-tests -Wall -Wextra -Weffec++ -std==c++14 main.cpp
+CXXFLAGS = -Wall -Wextra -Weffec++ -std=c++14
+vector-tests: main.o
+	$(CXX) -0 $@ $^
