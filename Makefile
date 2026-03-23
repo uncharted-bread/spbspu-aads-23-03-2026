@@ -1,4 +1,15 @@
+.PHONY: all test
 CXXFLAGS = -Wall -Wextra -Weffc++ -std=c++14 -MMD
-vector-tests:main.cpp
+
+all: vector-tests
+
+test: vector-tests
+	@./$^
+
+vector-tests: main.o
 	$(CXX) -o $@ $^
+
 -include main.d
+
+clean:
+	@$(RM) -rf vector-tests main.d main.o
